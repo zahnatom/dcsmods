@@ -1,0 +1,86 @@
+-- local nameknight = 'SkyKnight'
+-- Sky_Knight_Missile = {
+--     category        = CAT_MISSILES,
+--     name            = nameknight,
+--     user_name       = _(nameknight),
+--     model           = "SkyKnight_Missile",
+--     mass            = 35,
+--     wsTypeOfWeapon  = {4,4,34,WSTYPE_PLACEHOLDER},
+
+--     Escort          = 0,
+--     Head_Type       = 2,
+--     sigma           = {0.001, 0.001, 0.001},
+--     M               = 35,
+--     H_max           = 8000,
+--     H_min           = 1,
+--     Diam            = 115,
+--     Cx_pil          = 1,
+--     D_max           = 10000,
+--     D_min           = 500,
+--     Head_Form       = 1,
+--     Life_Time       = 60.0,
+--     Nr_max          = 150,
+--     v_min           = 350.0,
+--     v_mid           = 1000.0,
+--     Mach_max        = 3
+--     t_b             = 0.75,
+--     t_acc           = 10,
+--     t_marsh         = 0.0,
+--     Range_max       = 10000,
+--     H_min_t         = 10,
+--     Fi_start        = 3.14152,
+--     Fi_rak          = 3.14152,
+--     Fi_excort       = 3.14152,
+--     Fi_search       = 99.99,
+--     OmViz_max       = 99.99,
+--     Engine_Type     = 1,
+--     warhead         = enhanced_a2a_warhead(10),
+--     exhaust         = {1,1,1,1},
+--     X_back          = -1.55,
+--     Y_back          = 0,
+--     Z_back          = 0,
+--     X_back_acc      = -1.55,
+--     Reflection      = 0.01,
+--     KillDistance    = 20.0,
+--     PN_coeffs       = {
+--     4,
+--     2000, 0.975,
+--     5000, 1.15,
+--     9000, 1.2,
+--     15000, 1.3
+--     };
+--     shape_table_data = {
+--         {
+--             name = nameknight,
+--             file = 'SkyKnight_Missile',
+--             life = 1,
+--             fire = {0, 1},
+--             user_name = "SkyKnight_Missile"
+--             index = WSTYPE_PLACEHOLDER,
+--         },
+--     };
+-- }
+
+-- declare_weapon(Sky_Knight_Missile);
+
+-- GT_t.LN_t.SkyKnight_Missile = {};
+-- GT_t.LN_t.SkyKnight_Missile.type = 4;
+-- GT_t.LN_t.SkyKnight_Missile.distanceMax = 500;
+-- GT_t.LN_t.SkyKnight_Missile.distanceMax = 10000;
+-- GT_t.LN_t.SkyKnight_Missile.maxShootingSpeed = 0;
+-- GT_t.LN_t.SkyKnight_Missile.show_external_missile = true;
+-- GT_t.LN_t.SkyKnight_Missile.launch_delay = 0.2;
+-- GT_t.LN_t.SkyKnight_Missile.barrels_reload_type = 3;
+-- GT_t.LN_t.SkyKnight_Missile.reactionTime = 0.1;
+-- GT_t.LN_t.SkyKnight_Missile.reflection_limit = 0.02;
+-- GT_t.LN_t.SkyKnight_Missile.ECM_K = -1;
+-- GT_t.LN_t.SkyKnight_Missile.beamWidth = math.rad(0);
+-- GT_t.LN_t.SkyKnight_Missile.sensor = {};
+-- set_recursive_metatable(GT_t.LN_t.SkyKnight_Missile.sensor, GT_t.WSN_t[0]);
+-- GT_t.LN_t.SkyKnight_Missile.PL = {};
+-- GT_t.LN_t.SkyKnight_Missile.PL[1] = {};
+-- GT_t.LN_t.SkyKnight_Missile.PL[1].ammo_capacity = 60;
+-- GT_t.LN_t.SkyKnight_Missile.PL[1].type_ammunition = Sky_Knight_Missile.wsTypeOfWeapon;
+-- GT_t.LN_t.SkyKnight_Missile.PL[1].reload_time = 3600;
+-- GT_t.LN_t.SkyKnight_Missile.PL[1].shot_delay = 0.2;
+-- GT_t.LN_t.SkyKnight_Missile.BR = {}
