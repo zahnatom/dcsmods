@@ -21,10 +21,11 @@ info		 	= _("zahnatom's pack. anything that he deems to be worthy"),
 mount_vfs_model_path	(current_mod_path.."/Shapes")
 
 -- textures
-mount_vfs_texture_path  (current_mod_path.."/Textures/SkyKnight.zip")
+mount_vfs_texture_path  (current_mod_path.."/Textures/SkyNex.zip")
 
 -- weapons
 dofile(current_mod_path..'/Database/Weapons/SkyKnight_Missile.lua')
+dofile(current_mod_path..'/Database/Weapons/Oerlikon_RGMK3_Guns_Ammo.lua')
 
 -- sensors
 dofile(current_mod_path..'/Database/Sensors/Oerlikon_MSU_Sensors.lua')
@@ -34,5 +35,6 @@ dofile(current_mod_path..'/Database/SAM/SkyKnight_MLU.lua')
 
 -- vehicle
 dofile(current_mod_path..'/Database/Vehicles/Oerlikon_MSU.lua')
+dofile(current_mod_path..'/Database/Vehicles/Oerlikon_RGMK3.lua')
 
 plugin_done()

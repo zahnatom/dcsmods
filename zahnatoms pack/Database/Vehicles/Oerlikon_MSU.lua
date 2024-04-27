@@ -14,7 +14,7 @@ GT.animation_arguments.locator_rotation = 11;
 GT.radar_rotation_period = 0.000000000000000000000000000000000001;
 GT.snd.radarRotation = "GndTech/RadarRotation";
 
--- GT.toggle_alarm_state_interval = 10.0;
+GT.toggle_alarm_state_interval = 10.0;
 
 --chassis
 GT.sensor = {};
@@ -48,15 +48,15 @@ GT.WS[ws].pos = {0,0,0};
 GT.WS[ws].angles = {
 					{math.rad(180), math.rad(-180), math.rad(-25), math.rad(90)},
 					};
-GT.WS[ws].drawArgument1 = -1;
-GT.WS[ws].drawArgument2 = -1;
+GT.WS[ws].drawArgument1 = 50;
+GT.WS[ws].drawArgument2 = 51;
 GT.WS[ws].omegaY = (2 * math.pi * 30) / 60;
 GT.WS[ws].omegaZ = (2 * math.pi * 30) / 60;
 GT.WS[ws].pidY = {p = 15, i = 0.02, d = 3, inn = 1.2}
 GT.WS[ws].pidZ = {p = 15, i = 0.02, d = 3, inn = 1.2}
 GT.WS[ws].LN = {};
 GT.WS[ws].LN[1] = {};
-GT.WS[ws].LN[1].max_number_of_missiles_channels = 1;
+GT.WS[ws].LN[1].max_number_of_missiles_channels = 2;
 GT.WS[ws].LN[1].type = 103;
 GT.WS[ws].LN[1].frequencyRange = {{4.0e9, 8.0e9}, {2.0e9, 4.0e9}}
 GT.WS[ws].LN[1].reactionTime = 0.0000000000000000000000000000000000000000000000000000000000000001;
