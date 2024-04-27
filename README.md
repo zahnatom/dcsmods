@@ -2,3 +2,5 @@ I make whatever I want to make which is mostly stuff that I can find enough deta
 The performance may not be entirely accurate to IRL but thats often due to limitations with the DCS engine and ofc a lack of details.
 
 Use at your own discretion
+
+If you want to contribute or something along those lines, DM me on Discord: @zahnatom
