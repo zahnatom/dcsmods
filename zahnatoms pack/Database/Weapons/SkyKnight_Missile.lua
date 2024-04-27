@@ -1,5 +1,3 @@
--- Weapons for MIM-104 Patriot - PAC-3 MSE by Currenthill
-
 local namename = 'SkyKnight'
 Sky_Knight_Missile = {
     category        = CAT_MISSILES,

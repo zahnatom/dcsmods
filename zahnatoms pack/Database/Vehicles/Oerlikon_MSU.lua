@@ -1,5 +1,3 @@
--- MIM-104 LTAMDS STR by Currenthill
-
 GT = {};
 GT_t.ws = 0;
 set_recursive_metatable(GT, GT_t.generic_stationary);

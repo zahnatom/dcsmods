@@ -11,7 +11,7 @@ GT.toggle_alarm_state_interval = 5;
 GT.IR_emission_coeff = 0.08;
 
 GT.AddPropVehicle = {
-    { id = "Hydraulic lifts extended" , control = 'checkbox', label = _('Hydraulic lifts extended'), defValue = false, arg=15, boolean_inverted = false} -- boolean_inverted = true by default: element present - argVal=0, absent - argVal=1
+    { id = "Hydraulic lifts extended" , control = 'checkbox', label = _('Hydraulic lifts extended'), defValue = true, arg=15, boolean_inverted = false} -- boolean_inverted = true by default: element present - argVal=0, absent - argVal=1
 }
 
 GT.sensor = {};
