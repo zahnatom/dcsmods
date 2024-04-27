@@ -56,7 +56,7 @@ GT.WS[ws].pidY = {p = 15, i = 0.02, d = 3, inn = 1.2}
 GT.WS[ws].pidZ = {p = 15, i = 0.02, d = 3, inn = 1.2}
 GT.WS[ws].LN = {};
 GT.WS[ws].LN[1] = {};
-GT.WS[ws].LN[1].max_number_of_missiles_channels = 2;
+GT.WS[ws].LN[1].max_number_of_missiles_channels = 1;
 GT.WS[ws].LN[1].type = 103;
 GT.WS[ws].LN[1].frequencyRange = {{4.0e9, 8.0e9}, {2.0e9, 4.0e9}}
 GT.WS[ws].LN[1].reactionTime = 0.0000000000000000000000000000000000000000000000000000000000000001;
