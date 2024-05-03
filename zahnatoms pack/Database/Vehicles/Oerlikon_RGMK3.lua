@@ -58,7 +58,7 @@ GT.WS[ws].omegaZ = math.rad(115);
 GT.WS[ws].pidY = {p=300, i = 0.05, d = 10.0, inn = 1000};
 GT.WS[ws].pidZ = {p=300, i = 0.05, d = 10.0, inn = 1000};
 GT.WS[ws].reference_angle_Y = math.rad(0);
-GT.WS[ws].reference_angle_Z = math.rad(0);	
+GT.WS[ws].reference_angle_Z = math.rad(5);	
 GT.WS[ws].stabilizer = true;
 GT.WS[ws].laser = true;
 GT.WS[ws].pointer = "Muzzle.1"

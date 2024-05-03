@@ -4,14 +4,14 @@ declare_weapon({
     user_name = _("35 mm AHEAD"),
     model_name = "tracer_bullet_yellow",
     v0 = 1100,
-    Dv0 = 0.0080, -- Deviation of speed
-    Da0 = 0.0008, -- Deviation in aiming?
+    Dv0 = 0.0000, -- Deviation of speed
+    Da0 = 0.0000, -- Deviation in aiming?
     Da1 = 0.0,
     mass = 0.750,
     round_mass = 1,
     cartridge_mass = 0.25,
     explosive = 0.5,
-    life_time = 5,
+    life_time = 4,
     caliber = 35.0,
     s = 0,
     j = 0,
@@ -20,7 +20,7 @@ declare_weapon({
     cx = {0.5, 1.27, 0.7, 0.2, 2.3},
     k1 = 3.5e-09,
     tracer_off = 5,
-    scale_tracer = 1.5,
+    scale_tracer = 0.25,
     cartridge = 0
     -- aiming_table = {
     --     precalculateAirDefenceAimingTable = true,
@@ -36,7 +36,7 @@ declare_weapon({
     model_name = "tracer_bullet_yellow",
     v0 = 1100,
     Dv0 = 0.0080,
-    Da0 = 0.0008,
+    Da0 = 0.001,
     Da1 = 0.0,
     mass = 0.750,
     round_mass = 1,
@@ -86,17 +86,19 @@ GT_t.LN_t.Centurion_C_RAM_Phalanx.useTargetAccelInSight = true
 set_recursive_metatable(GT_t.LN_t.Oerlikon_RG_MK3.sensor, GT_t.WSN_t[5]);
 GT_t.LN_t.Oerlikon_RG_MK3.PL = {};
 GT_t.LN_t.Oerlikon_RG_MK3.PL[1] = {};
-GT_t.LN_t.Oerlikon_RG_MK3.PL[1].ammo_capacity = 13 * 30; -- actuall 252
+GT_t.LN_t.Oerlikon_RG_MK3.PL[1].ammo_capacity = 5 * 25 * 5; -- actuall 252
 -- GT_t.LN_t.Oerlikon_RG_MK3.PL[1].portionAmmoCapacity = 26 * 10;
-GT_t.LN_t.Oerlikon_RG_MK3.PL[1].switch_on_delay = 5;
+GT_t.LN_t.Oerlikon_RG_MK3.PL[1].switch_on_delay = 3;
 GT_t.LN_t.Oerlikon_RG_MK3.PL[1].shell_name = {
-    "Oerlikon_AHEAD", "Oerlikon_AHEAD_INVIS", "Oerlikon_AHEAD_INVIS",
-    "Oerlikon_AHEAD_INVIS", "Oerlikon_AHEAD_INVIS"
+    "Oerlikon_AHEAD"
 };
-GT_t.LN_t.Oerlikon_RG_MK3.PL[1].shot_delay = 60 / (1000 * 5);
-GT_t.LN_t.Oerlikon_RG_MK3.PL[1].reload_time = 5;
+for i = 1, 50 do
+    table.insert(GT_t.LN_t.Oerlikon_RG_MK3.PL[1].shell_name, "Oerlikon_AHEAD_INVIS");
+end
+GT_t.LN_t.Oerlikon_RG_MK3.PL[1].shot_delay = 60 / (1000 * 50);
+GT_t.LN_t.Oerlikon_RG_MK3.PL[1].reload_time = 3;
 GT_t.LN_t.Oerlikon_RG_MK3.BR = {{pos = {3.95, 0, 0}}};
-for i = 2, 30 do
+for i = 2, 60 do
     GT_t.LN_t.Oerlikon_RG_MK3.PL[i] = {};
     set_recursive_metatable(GT_t.LN_t.Oerlikon_RG_MK3.PL[i],
                             GT_t.LN_t.Oerlikon_RG_MK3.PL[1]);
