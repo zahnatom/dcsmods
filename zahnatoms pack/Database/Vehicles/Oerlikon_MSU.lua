@@ -16,10 +16,10 @@ GT.toggle_alarm_state_interval = 10.0;
 
 --chassis
 GT.sensor = {};
-GT.sensor.max_range_finding_target = 160000;
+GT.sensor.max_range_finding_target = 20000;
 GT.sensor.min_range_finding_target = 1;
 GT.sensor.max_alt_finding_target = 50000;
-GT.sensor.height = 5.895;
+GT.sensor.height = 4.45;
 
 --Burning after hit
 GT.visual.fire_size = 1.2; --relative burning size
@@ -48,8 +48,8 @@ GT.WS[ws].angles = {
 					};
 GT.WS[ws].drawArgument1 = 50;
 GT.WS[ws].drawArgument2 = 51;
-GT.WS[ws].omegaY = (2 * math.pi * 30) / 60;
-GT.WS[ws].omegaZ = (2 * math.pi * 30) / 60;
+GT.WS[ws].omegaY = math.rad(180);
+GT.WS[ws].omegaZ = math.rad(180);
 GT.WS[ws].pidY = {p = 15, i = 0.02, d = 3, inn = 1.2}
 GT.WS[ws].pidZ = {p = 15, i = 0.02, d = 3, inn = 1.2}
 GT.WS[ws].LN = {};
@@ -60,7 +60,7 @@ GT.WS[ws].LN[1].frequencyRange = {{4.0e9, 8.0e9}, {2.0e9, 4.0e9}}
 GT.WS[ws].LN[1].reactionTime = 0.0000000000000000000000000000000000000000000000000000000000000001;
 GT.WS[ws].LN[1].reflection_limit = 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000001;
 GT.WS[ws].LN[1].distanceMin = 1; 
-GT.WS[ws].LN[1].distanceMax = 160000; 
+GT.WS[ws].LN[1].distanceMax = 20000; 
 GT.WS[ws].LN[1].ECM_K = 0;
 GT.WS[ws].LN[1].min_trg_alt = 1;
 GT.WS[ws].LN[1].max_trg_alt = 50000;
@@ -68,7 +68,7 @@ GT.WS[ws].LN[1].beamWidth = math.rad(0.01746);
 -- GT.WS[ws].LN[1].depends_on_unit = {{{"MIM104_ECS",},},};
 GT.WS[ws].LN[1].maxShootingSpeed = 0;	
 
-for i = 1,125 do
+for i = 1,126 do
     ws = GT_t.inc_ws();
 	GT.WS[ws] = {};
     -- GT.WS[ws].base = 1;
@@ -76,8 +76,8 @@ for i = 1,125 do
 	GT.WS[ws].angles = {
 					{math.rad(180), math.rad(-180), math.rad(-25), math.rad(90)},
 					};
-    GT.WS[ws].omegaY = (2 * math.pi * 30) / 60;
-    GT.WS[ws].omegaZ = (2 * math.pi * 30) / 60;
+    GT.WS[ws].omegaY = math.rad(180);
+    GT.WS[ws].omegaZ = math.rad(180);
     GT.WS[ws].LN = {};
 	-- GT.WS[ws].LN[1] = {};
 	-- GT.WS[ws].LN[1].beamWidth = math.rad(360);	
@@ -89,7 +89,7 @@ for i = 1,125 do
 			type = 103,
 			reflection_limit = 0.0000000000000000000000000000000000000000001,
 			distanceMin = 1,
-			distanceMax = 160000,
+			distanceMax = 20000,
 			ECM_K = 0,
 			min_trg_alt = 1,
 			max_trg_alt = 50000,

@@ -12,21 +12,21 @@ Sky_Knight_Missile = {
 	sigma 			= {0.001, 0.001, 0.001},
     M 				= 35.0,
     H_max 			= 7500.0,
-    H_min 			= 1.0,
+    H_min 			= 50.0,
     Diam 			= 115.0,
     Cx_pil 			= 2,
     D_max 			= 10000.0,
-    D_min 			= 1.0,
+    D_min 			= 0.0,
     Head_Form 		= 0,
     Life_Time 		= 180.0,
     Nr_max 			= 75,
-    v_min 			= 50.0,
+    v_min 			= 1.0,
     v_mid 			= 2200.0,
-    Mach_max 		= 2.5,
+    Mach_max 		= 4,
     t_b 			= 0.0,
     t_acc 			= 0.0,
-    t_marsh 		= 12.0,
-    Range_max 		= 14000.0,
+    t_marsh 		= 5,
+    Range_max 		= 10000.0,
     H_min_t 		= 1.0,
     Fi_start    	= 3.14152, -- angle of tracking at firing
     Fi_rak      	= 3.14152,
@@ -46,8 +46,8 @@ Sky_Knight_Missile = {
 	hoj 			= 1,	
 	ccm_k0 			= 0.01,	
 	
-	-- active_radar_lock_dist	= 5000.0,
-	-- go_active_by_default	= 1,	
+	active_radar_lock_dist	= 25000.0,
+	go_active_by_default	= 1,	
 	
 	PN_coeffs = {4, 				
 				1000.0 ,0.975,		
@@ -69,31 +69,31 @@ Sky_Knight_Missile = {
     },
     ModelData = {
         58 ,  -- model params count
-		0.15,   -- characteristic square (характеристическая площадь) old 0.09 -- 4
+		0.1,   -- characteristic square (характеристическая площадь) old 0.09 -- 4
 		
 		-- Cx dependency parameters
-		0.125 , -- Cx_k0 plank Cx0 of subsonics ( M << 1) old 0.1 -- 0.17
-		0.125 , -- Cx_k1 peak height of the wave crisis old 0.1 -- 0.22
-		0.02 , -- Cx_k2 steepness of the front on the way to the wave crisis 
-		0.04, -- Cx_k3 bar Cx0 on supersonic ( M >> 1) old 0.06 -- 0.033
-		1.2 , -- Cx_k4 steepness of the decline behind the wave crisis old 1.2 -- 2.0
-		1.2 , -- polar dump coefficient (proportional to sqrt (M^2-1)) 
+		0.025 , -- Cx_k0 plank Cx0 of subsonics ( M << 1) old 0.1 -- 0.17
+		0.065 , -- Cx_k1 peak height of the wave crisis old 0.1 -- 0.22
+		0.01 , -- Cx_k2 steepness of the front on the way to the wave crisis 
+		0.035, -- Cx_k3 bar Cx0 on supersonic ( M >> 1) old 0.06 -- 0.033
+		0.9 , -- Cx_k4 steepness of the decline behind the wave crisis old 1.2 -- 2.0
+		0.7 , -- polar dump coefficient (proportional to sqrt (M^2-1)) 
 		
 		-- Cy dependency parameters
-		1.0 , -- Cy_k0 plank Sy0 on reverberation ( M << 1) old 0.8 -- 1.57
-		0.8	 , -- Cy_k1 plank Cy0 on supersonic ( M >> 1)
-		1.2  , -- Cy_k2 steepness of the recession (front) behind the wave crisis
+		0.7 , -- Cy_k0 plank Sy0 on reverberation ( M << 1) old 0.8 -- 1.57
+		0.6	 , -- Cy_k1 plank Cy0 on supersonic ( M >> 1)
+		0.9  , -- Cy_k2 steepness of the recession (front) behind the wave crisis
 		
 		0.7 , -- 7 Alfa_max maximum trim angle, radians 1.0
 		0.0, -- Extra G by trust vector
         
         -- Engine data. Time, fuel flow, thrust.    
 --    t_statr        t_b     t_accel     t_march     t_inertial        t_break        t_end            -- Stage
-        0.0,        0.25,    0.01,          7.5,        0.0,            0.0,        1.0e9,         -- time of stage, sec
+        0.0,        0.3,    0.01,          4,        0.0,            0.0,        1.0e9,         -- time of stage, sec
          0.0,        0.0,    0.0,        4.0,        0.0,            0.0,        0.0,           -- fuel flow rate in second, kg/sec(секундный расход массы топлива кг/сек)
-         0.0,        0.0,    0.0,    15000.0,    0.0,            0.0,        0.0,           -- thrust, newtons
+         0.0,        0.0,    0.0,    5000.0,    0.0,            0.0,        0.0,           -- thrust, newtons
     
-        180, -- self-destruction timer, sec
+        60, -- self-destruction timer, sec
 		180.0,  -- power system operation time, sec
 		0,  -- absolute altitude of self-destruction, m
 		0.05, -- control activation delay time (departure, safety maneuver), sec
@@ -109,16 +109,16 @@ Sky_Knight_Missile = {
 		0.0, -- derivative of range with respect to carrier speed at a height of 1 km, PPP
 		0.0, -- derivative of range with respect to target speed at 1 km altitude, ZPS
 		0.0, -- height derivative of range derivative with respect to target speed, ZPS
-		0.0, -- range angle 180 degrees (towards), H=5000m, V=900km/h, m
-		0.0, -- range angle 0 (in pursuit) hail, H=5000m, V=900km/h, m
-		0.0, -- range angle 180 (towards) deg, H=10000m, V=900km/h, m
-		0.0,  -- range angle 0 (in pursuit) hail, H=10000m, V=900km/h, m
-		0.0, -- range angle 180 (towards) deg, H=1000m, V=900km/h, m
-		0.0, -- range angle 0 (in pursuit) hail, H=1000m, V=900km/h, m
-		0.0, -- offset back from the zero of the backsight of the reachability zone
-		0.0, -- percentage of guaranteed range from the range in PPP at an altitude of 1 km
-		0.0, -- derivative of the percentage of guaranteed range in PPP with respect to height
-		0.0, -- Change in the coefficients of the slope of the curve in the upper and lower hemispheres from the height of the carrier.
+		10000.0, -- range angle 180 degrees (towards), H=5000m, V=900km/h, m
+		2500.0, -- range angle 0 (in pursuit) hail, H=5000m, V=900km/h, m
+		2500.0, -- range angle 180 (towards) deg, H=10000m, V=900km/h, m
+		2500.0,  -- range angle 0 (in pursuit) hail, H=10000m, V=900km/h, m
+		10000.0, -- range angle 180 (towards) deg, H=1000m, V=900km/h, m
+		2500.0, -- range angle 0 (in pursuit) hail, H=1000m, V=900km/h, m
+		1.0, -- offset back from the zero of the backsight of the reachability zone
+		1.4, -- percentage of guaranteed range from the range in PPP at an altitude of 1 km
+		-3.0, -- derivative of the percentage of guaranteed range in PPP with respect to height
+		0.5, -- Change in the coefficients of the slope of the curve in the upper and lower hemispheres from the height of the carrier.
     },
 }
 
@@ -126,8 +126,8 @@ declare_weapon(Sky_Knight_Missile)
 
 GT_t.LN_t.SkyKnight_Missile = {}; 
 GT_t.LN_t.SkyKnight_Missile.type = 4;
-GT_t.LN_t.SkyKnight_Missile.distanceMin = 1;
-GT_t.LN_t.SkyKnight_Missile.distanceMax = 160000;
+GT_t.LN_t.SkyKnight_Missile.distanceMin = 0;
+GT_t.LN_t.SkyKnight_Missile.distanceMax = 10000;
 GT_t.LN_t.SkyKnight_Missile.maxShootingSpeed = 0;
 GT_t.LN_t.SkyKnight_Missile.show_external_missile = true
 GT_t.LN_t.SkyKnight_Missile.launch_delay = 0.09;

@@ -28,23 +28,23 @@ Oerlikon_MSU_Radar = {
     type = RADAR_AS,
     scan_volume = {
         azimuth = {-180, 180},
-        elevation = {0, 97}
+        elevation = {-5, 70}
     },
     max_measuring_distance = 160000,
     detection_distance = 
     {
         [HEMISPHERE_UPPER] = 
         {
-            [ASPECT_HEAD_ON] = 160000,
-            [ASPECT_TAIL_ON] = 160000,
+            [ASPECT_HEAD_ON] = 1600000,
+            [ASPECT_TAIL_ON] = 1600000,
         },
         [HEMISPHERE_LOWER] = 
         {
-            [ASPECT_HEAD_ON] = 160000,
-            [ASPECT_TAIL_ON] = 160000,
+            [ASPECT_HEAD_ON] = 1600000,
+            [ASPECT_TAIL_ON] = 1600000,
         },
     },
-    lock_on_distance_coeff = 1,
+    lock_on_distance_coeff = 0.35,
     velocity_limits = 
     {
         radial_velocity_min = -1000,

@@ -15,7 +15,7 @@ GT.AddPropVehicle = {
 }
 
 GT.sensor = {};
-GT.sensor.max_range_finding_target = 30000;
+GT.sensor.max_range_finding_target = 0;
 GT.sensor.min_range_finding_target = 0;
 GT.sensor.max_alt_finding_target = 30000;
 GT.sensor.min_alt_finding_target = 0;
@@ -36,7 +36,7 @@ GT.visual.agony_explosion_size = 5
 
 GT.WS = {}
 local ws;
-GT.WS.maxTargetDetectionRange = 30000
+GT.WS.maxTargetDetectionRange = 160000
 GT.WS.radar_type = 103
 GT.WS.radar_rotation_type = 0
 -- GT.WS.searchRadarMaxElevation = math.rad(85);
@@ -79,7 +79,7 @@ GT.Rate = 25;
 
 
 GT.EPLRS = true;
-GT.DetectionRange = 30000;
+GT.DetectionRange = 0;
 GT.ThreatRange = 4000;
 GT.airWeaponDist = 4000;
 GT.ThreatRangeMin = 0;
