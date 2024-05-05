@@ -58,7 +58,7 @@ GT.WS[ws].LN[1].max_number_of_missiles_channels = 1;
 GT.WS[ws].LN[1].type = 103;
 GT.WS[ws].LN[1].frequencyRange = {{4.0e9, 8.0e9}, {2.0e9, 4.0e9}}
 GT.WS[ws].LN[1].reactionTime = 0.0000000000000000000000000000000000000000000000000000000000000001;
-GT.WS[ws].LN[1].reflection_limit = 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000001;
+GT.WS[ws].LN[1].reflection_limit = 0;
 GT.WS[ws].LN[1].distanceMin = 1; 
 GT.WS[ws].LN[1].distanceMax = 20000; 
 GT.WS[ws].LN[1].ECM_K = 0;
@@ -87,7 +87,7 @@ for i = 1,126 do
 	GT.WS[ws].LN = {
 		{
 			type = 103,
-			reflection_limit = 0.0000000000000000000000000000000000000000001,
+			reflection_limit = 0,
 			distanceMin = 1,
 			distanceMax = 20000,
 			ECM_K = 0,
