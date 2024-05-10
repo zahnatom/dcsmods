@@ -15,7 +15,7 @@ GT.AddPropVehicle = {
 }
 
 GT.sensor = {};
-GT.sensor.max_range_finding_target = 0;
+GT.sensor.max_range_finding_target = 1;
 GT.sensor.min_range_finding_target = 0;
 GT.sensor.max_alt_finding_target = 30000;
 GT.sensor.min_alt_finding_target = 0;
