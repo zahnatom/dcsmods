@@ -11,3 +11,6 @@ If you want to contribute or something along those lines, DM me on Discord: @zah
 ![img](pictures/3image.png)
 ![img](pictures/4image.png)
 ![img](pictures/5image.png)
+![img](pictures/6image.png)
+![img](pictures/7image.png)
+
