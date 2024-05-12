@@ -4,3 +4,10 @@ The performance may not be entirely accurate to IRL but thats often due to limit
 Use at your own discretion
 
 If you want to contribute or something along those lines, DM me on Discord: @zahnatom
+
+
+![img](pictures/1image.png)
+![img](pictures/2image.png)
+![img](pictures/3image.png)
+![img](pictures/4image.png)
+![img](pictures/5image.png)
